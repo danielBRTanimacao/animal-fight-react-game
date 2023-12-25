@@ -12,11 +12,12 @@ export default () => {
                     <div className="d-grid gap-2 col-8 mx-auto">
                         <button className="btn btn-lg btn-game">jogar</button>
                         <button className="btn btn-lg btn-game" disabled>
-                            Opções
+                            Compartilhar
                         </button>
                     </div>
                 </div>
             </section>
+            <section className="pt-5 moving-floor"></section>
         </>
     );
 };

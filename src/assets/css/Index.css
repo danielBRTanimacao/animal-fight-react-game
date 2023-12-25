@@ -7,13 +7,31 @@
     src: url(../fonts/LilitaOne-Regular.ttf);
 }
 
+@keyframes animation-background {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 400px;
+    }
+}
+
 .bg-img-back {
     width: 410px;
     height: 24rem;
     background-image: url(../imgs/background-animals.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center; /*Ajeitar animação kkk*/
+}
+
+.moving-floor {
+    background-image: url(../imgs/movinGround.png);
+    animation-name: animation-background;
+    animation-duration: 4s;
+    background-repeat: repeat;
+    background-size: cover;
+    height: 24rem;
 }
 
 .title-principal {
@@ -33,4 +51,28 @@
     font-family: "LilitaOne";
     color: white;
     background-color: #103b27;
+}
+
+.btn-game.btn-game-exit {
+    background-color: red;
+}
+
+/*Modal configure*/
+.modal-back {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(27, 74, 8, 0.973);
+    z-index: 1000;
+}
+.container-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 20px;
+    background-color: white;
 }

@@ -1,35 +1,24 @@
+import { useState } from "react";
+import Modal from "./Modal";
+
 export default () => {
+    const [openModal, setOpenModal] = useState(false);
+
     return (
         <>
             <header className="container m-2">
-                <div className="d-flex gap-2 justify-content-end">
+                <div className="d-flex justify-content-end">
                     <div>
-                        <button className="btn btn-game">
+                        <button
+                            className="btn btn-outline-success"
+                            onClick={() => setOpenModal(true)}
+                        >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="32"
                                 height="32"
                                 fill="currentColor"
-                                class="bi bi-music-note-beamed"
-                                viewBox="0 0 16 16"
-                            >
-                                <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2m9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2" />
-                                <path
-                                    fill-rule="evenodd"
-                                    d="M14 11V2h1v9zM6 3v10H5V3z"
-                                />
-                                <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4z" />
-                            </svg>
-                        </button>
-                    </div>
-                    <div>
-                        <button className="btn btn-game">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="32"
-                                height="32"
-                                fill="currentColor"
-                                class="bi bi-gear"
+                                className="bi bi-gear"
                                 viewBox="0 0 16 16"
                             >
                                 <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
@@ -39,6 +28,34 @@ export default () => {
                     </div>
                 </div>
             </header>
+            <Modal
+                isOpen={openModal}
+                setOpenModal={() => setOpenModal(!openModal)}
+                title={"Configurações"}
+            >
+                <div class="form-check form-switch">
+                    <input
+                        className="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="audioOn"
+                    />
+                    <label class="form-check-label" for="audioOn">
+                        Música
+                    </label>
+                </div>
+                <div class="form-check form-switch">
+                    <input
+                        className="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="effectOn"
+                    />
+                    <label class="form-check-label" for="effectOn">
+                        Efeito sonoros
+                    </label>
+                </div>
+            </Modal>
         </>
     );
 };
