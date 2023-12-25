@@ -7,31 +7,13 @@
     src: url(../fonts/LilitaOne-Regular.ttf);
 }
 
-@keyframes animation-background {
-    0% {
-        left: 0;
-    }
-    100% {
-        left: 400px;
-    }
-}
-
 .bg-img-back {
-    width: 410px;
+    width: 26rem;
     height: 24rem;
     background-image: url(../imgs/background-animals.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center; /*Ajeitar animação kkk*/
-}
-
-.moving-floor {
-    background-image: url(../imgs/movinGround.png);
-    animation-name: animation-background;
-    animation-duration: 4s;
-    background-repeat: repeat;
-    background-size: cover;
-    height: 24rem;
+    background-position: center;
 }
 
 .title-principal {

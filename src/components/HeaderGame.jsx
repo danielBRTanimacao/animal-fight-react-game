@@ -6,7 +6,7 @@ export default () => {
 
     return (
         <>
-            <header className="container m-2">
+            <header className="container m-3">
                 <div className="d-flex justify-content-end">
                     <div>
                         <button

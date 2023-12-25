@@ -1,23 +1,18 @@
 import HeaderGame from "./components/HeaderGame";
+import GameMain from "./components/GameMain";
+import Playing from "./components/Playing";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 export default () => {
     return (
         <>
             <HeaderGame />
-            <section className="pt-5">
-                <div className="container text-center bg-img-back rounded mt-5 p-5">
-                    <h1 className="title-principal display-5 pb-4">
-                        Animal fight
-                    </h1>
-                    <div className="d-grid gap-2 col-8 mx-auto">
-                        <button className="btn btn-lg btn-game">jogar</button>
-                        <button className="btn btn-lg btn-game" disabled>
-                            Compartilhar
-                        </button>
-                    </div>
-                </div>
-            </section>
-            <section className="pt-5 moving-floor"></section>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<GameMain />} />
+                    <Route path="/game" element={<Playing />} />
+                </Routes>
+            </BrowserRouter>
         </>
     );
 };
