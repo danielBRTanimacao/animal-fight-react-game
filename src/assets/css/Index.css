@@ -1,0 +1,36 @@
+@font-face {
+    font-family: "Mansalva";
+    src: url(../fonts/Mansalva-Regular.ttf);
+}
+@font-face {
+    font-family: "LilitaOne";
+    src: url(../fonts/LilitaOne-Regular.ttf);
+}
+
+.bg-img-back {
+    width: 410px;
+    height: 24rem;
+    background-image: url(../imgs/background-animals.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.title-principal {
+    color: white;
+    font-family: "Mansalva";
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #233f11;
+}
+
+.btn-game {
+    font-family: "LilitaOne";
+    color: white;
+    background-color: #125a44;
+}
+
+.btn-game:hover {
+    font-family: "LilitaOne";
+    color: white;
+    background-color: #103b27;
+}
