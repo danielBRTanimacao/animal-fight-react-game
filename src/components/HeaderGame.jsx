@@ -10,7 +10,7 @@ export default () => {
                 <div className="d-flex justify-content-end">
                     <div>
                         <button
-                            className="btn btn-outline-success"
+                            className="btn btn-outline-dark"
                             onClick={() => setOpenModal(true)}
                         >
                             <svg
@@ -33,25 +33,25 @@ export default () => {
                 setOpenModal={() => setOpenModal(!openModal)}
                 title={"Configurações"}
             >
-                <div class="form-check form-switch">
+                <div className="form-check form-switch">
                     <input
                         className="form-check-input"
                         type="checkbox"
                         role="switch"
                         id="audioOn"
                     />
-                    <label class="form-check-label" for="audioOn">
+                    <label className="form-check-label" for="audioOn">
                         Música
                     </label>
                 </div>
-                <div class="form-check form-switch">
+                <div className="form-check form-switch">
                     <input
                         className="form-check-input"
                         type="checkbox"
                         role="switch"
                         id="effectOn"
                     />
-                    <label class="form-check-label" for="effectOn">
+                    <label className="form-check-label" for="effectOn">
                         Efeito sonoros
                     </label>
                 </div>

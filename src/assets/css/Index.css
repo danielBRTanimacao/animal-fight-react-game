@@ -1,3 +1,7 @@
+body {
+    background-color: #439b81;
+}
+
 @font-face {
     font-family: "Mansalva";
     src: url(../fonts/Mansalva-Regular.ttf);

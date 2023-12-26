@@ -1,7 +1,9 @@
+import ChooseAnimal from "./game-components/ChooseAnimal";
+
 export default () => {
     return (
         <>
-            <h1>jogando o game</h1>
+            <ChooseAnimal />
         </>
     );
 };
