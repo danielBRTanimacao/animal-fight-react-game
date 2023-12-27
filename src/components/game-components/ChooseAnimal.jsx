@@ -1,14 +1,29 @@
-import Snake from "../../assets/imgs/animals-sprite/snake.png";
-import Pinguim from "../../assets/imgs/animals-sprite/pinguim.png";
-import Baleia from "../../assets/imgs/animals-sprite/baleia.png";
-import Monkey from "../../assets/imgs/animals-sprite/monkey.png";
-import Elefante from "../../assets/imgs/animals-sprite/elefante.png";
-
 import Heart from "../../assets/imgs/animals-sprite/life.png";
 import Knife from "../../assets/imgs/animals-sprite/weapon.png";
 
 export default () => {
-    const animalChoose = [Snake, Pinguim, Baleia, Monkey, Elefante];
+    const animalChoose = [
+        String.fromCodePoint(128001),
+        String.fromCodePoint(128002),
+        String.fromCodePoint(128003),
+        String.fromCodePoint(128004),
+        String.fromCodePoint(128005),
+        String.fromCodePoint(128006),
+        String.fromCodePoint(128007),
+        String.fromCodePoint(128008),
+        String.fromCodePoint(128009),
+        String.fromCodePoint(128010),
+        String.fromCodePoint(128011),
+        String.fromCodePoint(128012),
+        String.fromCodePoint(128013),
+        String.fromCodePoint(128014),
+        String.fromCodePoint(128015),
+        String.fromCodePoint(128016),
+        String.fromCodePoint(128017),
+        String.fromCodePoint(128018),
+        String.fromCodePoint(128019),
+        String.fromCodePoint(128020)
+    ];
 
     return (
         <>
@@ -22,14 +37,13 @@ export default () => {
                 <section className="d-flex justify-content-center">
                     <div>
                         <button className="btn">
-                            <img
-                                width={150}
-                                className="bg-animal img-fluid"
-                                src={
-                                    animalChoose[Math.floor(Math.random() * 5)]
+                            <h1 className="animal-bg ">
+                                {
+                                    animalChoose[
+                                        Math.floor(Math.random() * 19 + 1)
+                                    ]
                                 }
-                                alt="snake"
-                            />
+                            </h1>
                             <div className="d-flex justify-content-evenly pt-4">
                                 <img src={Heart} alt="" />
                                 <img src={Knife} alt="" />
@@ -42,14 +56,13 @@ export default () => {
                     </div>
                     <div>
                         <button className="btn">
-                            <img
-                                width={150}
-                                className="bg-animal img-fluid"
-                                src={
-                                    animalChoose[Math.floor(Math.random() * 5)]
+                            <h1 className="animal-bg">
+                                {
+                                    animalChoose[
+                                        Math.floor(Math.random() * 19 + 1)
+                                    ]
                                 }
-                                alt="snake"
-                            />
+                            </h1>
                             <div className="d-flex justify-content-evenly pt-4">
                                 <img src={Heart} alt="" />
                                 <img src={Knife} alt="" />
@@ -62,14 +75,13 @@ export default () => {
                     </div>
                     <div>
                         <button className="btn">
-                            <img
-                                width={150}
-                                className="bg-animal img-fluid"
-                                src={
-                                    animalChoose[Math.floor(Math.random() * 5)]
+                            <h1 className="animal-bg">
+                                {
+                                    animalChoose[
+                                        Math.floor(Math.random() * 19 + 1)
+                                    ]
                                 }
-                                alt="snake"
-                            />
+                            </h1>
                             <div className="d-flex justify-content-evenly pt-4">
                                 <img src={Heart} alt="" />
                                 <img src={Knife} alt="" />
@@ -81,7 +93,6 @@ export default () => {
                         </button>
                     </div>
                 </section>
-                <section>Como jogar?</section>
             </div>
         </>
     );

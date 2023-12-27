@@ -1,5 +1,5 @@
 body {
-    background-color: #439b81;
+    background-color: #3d8871;
 }
 
 @font-face {
@@ -14,10 +14,8 @@ body {
 .bg-img-back {
     width: 26rem;
     height: 24rem;
-    background-image: url(../imgs/background-animals.png);
-    background-repeat: no-repeat;
+    background: url(../imgs/background-animals.png) center no-repeat;
     background-size: cover;
-    background-position: center;
 }
 
 .title-principal {
@@ -34,13 +32,8 @@ body {
 }
 
 .btn-game:hover {
-    font-family: "LilitaOne";
     color: white;
     background-color: #103b27;
-}
-
-.btn-game.btn-game-exit {
-    background-color: red;
 }
 
 /*Modal configure*/
@@ -50,7 +43,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(27, 74, 8, 0.973);
+    background-color: rgba(39, 73, 25, 0.9);
     z-index: 1000;
 }
 .container-modal {
@@ -64,8 +57,36 @@ body {
 }
 
 /*Choose animal*/
-.bg-animal {
-    background-color: rgb(188, 188, 188);
-    padding: 1rem;
+
+.animal-bg {
+    font-size: 6rem;
+    background-color: rgb(112, 188, 146);
+    padding-bottom: 1rem;
     border-radius: 10%;
+    transition: 1s;
+}
+
+@media (max-width: 767.98px) {
+    .animal-bg {
+        font-size: 3rem;
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(25deg);
+    }
+    50% {
+        transform: rotate(-25deg);
+    }
+}
+
+.animal-bg:hover {
+    animation: move 1.5s infinite ease-in;
+    /* animation: move;
+    animation-duration: 2s; */
+    background-color: rgb(47, 88, 88);
 }
