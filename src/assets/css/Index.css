@@ -62,3 +62,10 @@ body {
     padding: 20px;
     background-color: white;
 }
+
+/*Choose animal*/
+.bg-animal {
+    background-color: rgb(188, 188, 188);
+    padding: 1rem;
+    border-radius: 10%;
+}
