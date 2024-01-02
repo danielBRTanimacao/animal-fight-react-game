@@ -86,7 +86,5 @@ body {
 
 .animal-bg:hover {
     animation: move 1.5s infinite ease-in;
-    /* animation: move;
-    animation-duration: 2s; */
     background-color: rgb(47, 88, 88);
 }
