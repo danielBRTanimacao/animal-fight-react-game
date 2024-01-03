@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import Heart from "../../assets/imgs/animals-sprite/life.png";
 import Knife from "../../assets/imgs/animals-sprite/weapon.png";
+// import Globo from "../../assets/imgs/terra.png";
 
 export default () => {
     const animalChoose = [
@@ -59,8 +60,16 @@ export default () => {
                     <hr />
                 </header>
                 <section className="container text-center pb-5">
-                    <button className="btn btn-success">globo</button>
+                    <button className="btn">
+                        <img
+                            src=""
+                            className="img-fluid"
+                            alt="globo"
+                            width={300}
+                        />
+                    </button>
                 </section>
+
                 <section className="d-flex justify-content-center">
                     <div>
                         <button className="btn" onClick={animalChosen}>
