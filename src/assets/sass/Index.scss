@@ -1,0 +1,104 @@
+$bg-green-principal: rgb(112, 188, 146);
+$bg-green: #3d8871;
+$bg-button-green: rgb(47, 88, 88);
+$bg-black-green: #233f11;
+$bg-black-green-secondary: #103b27;
+$bg-soft-green: #125a44;
+$bg-soft-secondary-green: rgba(39, 73, 25, 0.9);
+
+$text-white: white;
+
+// testando o sass
+
+body {
+    background-color: $bg-green;
+}
+
+@font-face {
+    font-family: "Mansalva";
+    src: url(../fonts/Mansalva-Regular.ttf);
+}
+
+@font-face {
+    font-family: "LilitaOne";
+    src: url(../fonts/LilitaOne-Regular.ttf);
+}
+
+.bg-img-back {
+    width: 26rem;
+    height: 24rem;
+    background: url(../imgs/background-animals.png) center no-repeat;
+    background-size: cover;
+}
+
+.title-principal {
+    color: $text-white;
+    font-family: "Mansalva";
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: $bg-black-green;
+}
+
+.btn-game {
+    font-family: "LilitaOne";
+    color: $text-white;
+    background-color: $bg-soft-green;
+}
+
+.btn-game:hover {
+    color: $text-white;
+    background-color: $bg-black-green-secondary;
+}
+
+/*Modal configure*/
+.modal-back {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $bg-soft-secondary-green;
+    z-index: 1000;
+}
+
+.container-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 20px;
+    background-color: $text-white;
+}
+
+/*Choose animal*/
+
+.animal-bg {
+    font-size: 6rem;
+    background-color: $bg-green-principal;
+    padding-bottom: 1rem;
+    border-radius: 10%;
+    transition: 1s;
+}
+
+@media (max-width: 767.98px) {
+    .animal-bg {
+        font-size: 3rem;
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(25deg);
+    }
+    50% {
+        transform: rotate(-25deg);
+    }
+}
+
+.animal-bg:hover {
+    animation: move 1.5s infinite ease-in;
+    background-color: $bg-button-green;
+}

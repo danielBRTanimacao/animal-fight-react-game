@@ -6,6 +6,7 @@ body {
     font-family: "Mansalva";
     src: url(../fonts/Mansalva-Regular.ttf);
 }
+
 @font-face {
     font-family: "LilitaOne";
     src: url(../fonts/LilitaOne-Regular.ttf);
@@ -46,6 +47,7 @@ body {
     background-color: rgba(39, 73, 25, 0.9);
     z-index: 1000;
 }
+
 .container-modal {
     position: fixed;
     top: 50%;
@@ -57,7 +59,6 @@ body {
 }
 
 /*Choose animal*/
-
 .animal-bg {
     font-size: 6rem;
     background-color: rgb(112, 188, 146);
@@ -88,3 +89,5 @@ body {
     animation: move 1.5s infinite ease-in;
     background-color: rgb(47, 88, 88);
 }
+
+/*# sourceMappingURL=Index.css.map */
