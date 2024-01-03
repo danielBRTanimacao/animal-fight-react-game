@@ -12,7 +12,7 @@ export default ({ isOpen, setOpenModal, title, children }) => {
                             </div>
                             <div className="ms-5">
                                 <button
-                                    className="btn btn-game p-3"
+                                    className="btn btn-game px-3"
                                     onClick={setOpenModal}
                                 >
                                     X
