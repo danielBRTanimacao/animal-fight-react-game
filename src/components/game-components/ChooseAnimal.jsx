@@ -1,11 +1,10 @@
-// import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 import Heart from "../../assets/imgs/animals-sprite/life.png";
 import Knife from "../../assets/imgs/animals-sprite/weapon.png";
 
 export default () => {
-    const animalChoose = [
+    const animalList = [
         {
             nome: "Rato",
             img: String.fromCodePoint(128001),
@@ -134,75 +133,46 @@ export default () => {
         }
     ];
 
-    const acRandom = [
-        Math.floor(Math.random() * 10 + 1),
-        Math.floor(Math.random() * 10 + 1),
-        Math.floor(Math.random() * 10 + 1)
-    ];
+    const animalChooseRandom = Math.floor(Math.random() * 10 + 1);
 
-    const navigation = useNavigate();
-    const changeToGame = (e) => {
-        navigation("/fight");
-        console.log(e.target);
+    const [valueAnimal, setAnimalValue] = useState();
+
+    const animalChosed = (e) => {
+        console.log(e);
     };
 
     return (
         <>
-            <div className="container">
+            <section className="container">
                 <header>
                     <h1 className="display-1 title-principal text-center pb-3">
                         Escolha um animal
                     </h1>
                     <hr />
                 </header>
+
                 <section className="d-flex justify-content-center">
-                    <form onSubmit={changeToGame}>
-                        <button type="submit" className="btn">
+                    <div>
+                        <button
+                            type="submit"
+                            className="btn"
+                            onClick={animalChosed}
+                        >
                             <h1 className="animal-bg ">
-                                {animalChoose[acRandom[0]].img}
+                                {animalList[animalChooseRandom].img}
                             </h1>
                             <div className="d-flex justify-content-evenly pt-4">
                                 <img src={Heart} alt="" />
                                 <img src={Knife} alt="" />
                             </div>
                             <div className="d-flex justify-content-around title-principal fs-1">
-                                <p>{animalChoose[acRandom[0]].life}</p>
-                                <p>{animalChoose[acRandom[0]].power}</p>
+                                <p>{animalList[animalChooseRandom].life}</p>
+                                <p>{animalList[animalChooseRandom].power}</p>
                             </div>
                         </button>
-                    </form>
-                    <form onSubmit={changeToGame}>
-                        <button type="submit" className="btn">
-                            <h1 className="animal-bg ">
-                                {animalChoose[acRandom[1]].img}
-                            </h1>
-                            <div className="d-flex justify-content-evenly pt-4">
-                                <img src={Heart} alt="" />
-                                <img src={Knife} alt="" />
-                            </div>
-                            <div className="d-flex justify-content-around title-principal fs-1">
-                                <p>{animalChoose[acRandom[1]].life}</p>
-                                <p>{animalChoose[acRandom[1]].power}</p>
-                            </div>
-                        </button>
-                    </form>
-                    <form onSubmit={changeToGame}>
-                        <button type="submit" className="btn">
-                            <h1 className="animal-bg ">
-                                {animalChoose[acRandom[2]].img}
-                            </h1>
-                            <div className="d-flex justify-content-evenly pt-4">
-                                <img src={Heart} alt="" />
-                                <img src={Knife} alt="" />
-                            </div>
-                            <div className="d-flex justify-content-around title-principal fs-1">
-                                <p>{animalChoose[acRandom[2]].life}</p>
-                                <p>{animalChoose[acRandom[2]].power}</p>
-                            </div>
-                        </button>
-                    </form>
+                    </div>
                 </section>
-            </div>
+            </section>
         </>
     );
 };
