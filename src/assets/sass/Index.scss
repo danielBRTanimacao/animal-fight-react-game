@@ -77,15 +77,25 @@ body {
     background-color: $bg-green-principal;
     padding-bottom: 1rem;
     border-radius: 10%;
-    transition: 1s;
+    transition: all 0.5s ease-in-out;
 }
 
-@media (max-width: 767.98px) {
-    .animal-bg {
-        font-size: 3rem;
-    }
+.animal-bg-fight {
+    font-size: 6rem;
+    background-color: $bg-green-principal;
+    padding-bottom: 1rem;
+    border-radius: 10%;
+    transform: scaleX(-1);
 }
 
+.animal-bg-fight-enemy {
+    font-size: 6rem;
+    background-color: rgb(177, 68, 68);
+    padding-bottom: 1rem;
+    border-radius: 10%;
+}
+
+/*Diminuir o codigo dos três acima*/
 @keyframes move {
     0% {
         transform: rotate(0);
@@ -99,6 +109,6 @@ body {
 }
 
 .animal-bg:hover {
-    animation: move 1.5s infinite ease-in;
+    animation: move 1.3s infinite ease-in-out;
     background-color: $bg-button-green;
 }

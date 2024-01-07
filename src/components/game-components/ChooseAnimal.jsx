@@ -4,7 +4,7 @@ import Heart from "../../assets/imgs/animals-sprite/life.png";
 import Knife from "../../assets/imgs/animals-sprite/weapon.png";
 
 export default () => {
-    const animalList = [
+    const listOfAnimals = [
         {
             nome: "Rato",
             img: String.fromCodePoint(128001),
@@ -133,46 +133,80 @@ export default () => {
         }
     ];
 
-    const animalChooseRandom = Math.floor(Math.random() * 10 + 1);
+    const randomChoose = Math.floor(Math.random() * 17 + 1);
 
+    const [gameFight, setGameFight] = useState(true);
     const [valueAnimal, setAnimalValue] = useState();
 
-    const animalChosed = (e) => {
-        console.log(e);
+    const chosenAnimal = () => {
+        setAnimalValue(randomChoose);
+        setGameFight(false);
     };
-
     return (
         <>
-            <section className="container">
-                <header>
-                    <h1 className="display-1 title-principal text-center pb-3">
-                        Escolha um animal
-                    </h1>
-                    <hr />
-                </header>
+            {gameFight ? (
+                <section className="container">
+                    <header>
+                        <h1 className="display-1 title-principal text-center pb-3">
+                            Escolha um animal
+                        </h1>
+                        <hr />
+                    </header>
 
-                <section className="d-flex justify-content-center">
+                    <section className="d-flex justify-content-center">
+                        <div>
+                            <button
+                                type="submit"
+                                className="btn"
+                                onClick={chosenAnimal}
+                            >
+                                <h1 className="animal-bg">
+                                    {listOfAnimals[randomChoose].img}
+                                </h1>
+                                <div className="d-flex justify-content-evenly pt-4">
+                                    <img src={Heart} alt="" />
+                                    <img src={Knife} alt="" />
+                                </div>
+                                <div className="d-flex justify-content-around fs-1">
+                                    <p>{listOfAnimals[randomChoose].life}</p>
+                                    <p>{listOfAnimals[randomChoose].power}</p>
+                                </div>
+                            </button>
+                        </div>
+                    </section>
+                </section>
+            ) : (
+                <section className="container-lg d-flex justify-content-evenly">
                     <div>
-                        <button
-                            type="submit"
-                            className="btn"
-                            onClick={animalChosed}
-                        >
-                            <h1 className="animal-bg ">
-                                {animalList[animalChooseRandom].img}
-                            </h1>
-                            <div className="d-flex justify-content-evenly pt-4">
-                                <img src={Heart} alt="" />
-                                <img src={Knife} alt="" />
-                            </div>
-                            <div className="d-flex justify-content-around title-principal fs-1">
-                                <p>{animalList[animalChooseRandom].life}</p>
-                                <p>{animalList[animalChooseRandom].power}</p>
-                            </div>
-                        </button>
+                        <h3>{listOfAnimals[valueAnimal].nome}</h3>
+                        <h1 className="animal-bg-fight">
+                            {listOfAnimals[valueAnimal].img}
+                        </h1>
+                        <div className="d-flex justify-content-evenly pt-4">
+                            <img src={Heart} alt="" />
+                            <img src={Knife} alt="" />
+                        </div>
+                        <div className="d-flex justify-content-around fs-1">
+                            <p>{listOfAnimals[valueAnimal].life}</p>
+                            <p>{listOfAnimals[valueAnimal].power}</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>{listOfAnimals[randomChoose].nome}</h3>
+                        <h1 className="animal-bg-fight-enemy">
+                            {listOfAnimals[randomChoose].img}
+                        </h1>
+                        <div className="d-flex justify-content-evenly pt-4">
+                            <img src={Heart} alt="" />
+                            <img src={Knife} alt="" />
+                        </div>
+                        <div className="d-flex justify-content-around fs-1">
+                            <p>{listOfAnimals[randomChoose].life}</p>
+                            <p>{listOfAnimals[randomChoose].power}</p>
+                        </div>
                     </div>
                 </section>
-            </section>
+            )}
         </>
     );
 };

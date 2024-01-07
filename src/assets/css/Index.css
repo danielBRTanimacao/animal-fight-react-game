@@ -1,93 +1,101 @@
+@charset "UTF-8";
 body {
-    background-color: #3d8871;
+  background-color: #3d8871;
 }
 
 @font-face {
-    font-family: "Mansalva";
-    src: url(../fonts/Mansalva-Regular.ttf);
+  font-family: "Mansalva";
+  src: url(../fonts/Mansalva-Regular.ttf);
 }
-
 @font-face {
-    font-family: "LilitaOne";
-    src: url(../fonts/LilitaOne-Regular.ttf);
+  font-family: "LilitaOne";
+  src: url(../fonts/LilitaOne-Regular.ttf);
 }
-
 .bg-img-back {
-    width: 26rem;
-    height: 24rem;
-    background: url(../imgs/background-animals.png) center no-repeat;
-    background-size: cover;
+  width: 26rem;
+  height: 24rem;
+  background: url(../imgs/background-animals.png) center no-repeat;
+  background-size: cover;
 }
 
 .title-principal {
-    color: white;
-    font-family: "Mansalva";
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #233f11;
+  color: white;
+  font-family: "Mansalva";
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #233f11;
 }
 
 .btn-game {
-    font-family: "LilitaOne";
-    color: white;
-    background-color: #125a44;
+  font-family: "LilitaOne";
+  color: white;
+  background-color: #125a44;
 }
 
 .btn-game:hover {
-    color: white;
-    background-color: #103b27;
+  color: white;
+  background-color: #103b27;
 }
 
 /*Modal configure*/
 .modal-back {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(39, 73, 25, 0.9);
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(39, 73, 25, 0.9);
+  z-index: 1000;
 }
 
 .container-modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 10px;
-    padding: 20px;
-    background-color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  padding: 20px;
+  background-color: white;
 }
 
 /*Choose animal*/
 .animal-bg {
-    font-size: 6rem;
-    background-color: rgb(112, 188, 146);
-    padding-bottom: 1rem;
-    border-radius: 10%;
-    transition: 1s;
+  font-size: 6rem;
+  background-color: rgb(112, 188, 146);
+  padding-bottom: 1rem;
+  border-radius: 10%;
+  transition: all 0.5s ease-in-out;
 }
 
-@media (max-width: 767.98px) {
-    .animal-bg {
-        font-size: 3rem;
-    }
+.animal-bg-fight {
+  font-size: 6rem;
+  background-color: rgb(112, 188, 146);
+  padding-bottom: 1rem;
+  border-radius: 10%;
+  transform: scaleX(-1);
 }
 
+.animal-bg-fight-enemy {
+  font-size: 6rem;
+  background-color: rgb(177, 68, 68);
+  padding-bottom: 1rem;
+  border-radius: 10%;
+}
+
+/*Diminuir o codigo dos três acima*/
 @keyframes move {
-    0% {
-        transform: rotate(0);
-    }
-    25% {
-        transform: rotate(25deg);
-    }
-    50% {
-        transform: rotate(-25deg);
-    }
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(25deg);
+  }
+  50% {
+    transform: rotate(-25deg);
+  }
 }
-
 .animal-bg:hover {
-    animation: move 1.5s infinite ease-in;
-    background-color: rgb(47, 88, 88);
+  animation: move 1.3s infinite ease-in-out;
+  background-color: rgb(47, 88, 88);
 }
 
 /*# sourceMappingURL=Index.css.map */
