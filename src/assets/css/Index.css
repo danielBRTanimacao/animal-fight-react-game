@@ -98,4 +98,9 @@ body {
   background-color: rgb(47, 88, 88);
 }
 
+.fight-style {
+  cursor: pointer;
+  margin-top: 20vh;
+}
+
 /*# sourceMappingURL=Index.css.map */

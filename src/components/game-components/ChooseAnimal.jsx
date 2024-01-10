@@ -176,36 +176,54 @@ export default () => {
                     </section>
                 </section>
             ) : (
-                <section className="container-lg d-flex justify-content-evenly">
-                    <div>
-                        <h3>{listOfAnimals[valueAnimal].nome}</h3>
-                        <h1 className="animal-bg-fight">
-                            {listOfAnimals[valueAnimal].img}
-                        </h1>
-                        <div className="d-flex justify-content-evenly pt-4">
-                            <img src={Heart} alt="" />
-                            <img src={Knife} alt="" />
+                <>
+                    <section>
+                        <div>
+                            <button className="btn btn-game mx-1 my-1">
+                                Atacar
+                            </button>
+                            <button className="btn btn-game mx-1 my-1">
+                                Defender
+                            </button>
+                            <button className="btn btn-game mx-1 my-1">
+                                Especial
+                            </button>
+                            <button className="btn btn-game mx-1 my-1">
+                                Fugir
+                            </button>
                         </div>
-                        <div className="d-flex justify-content-around fs-1">
-                            <p>{listOfAnimals[valueAnimal].life}</p>
-                            <p>{listOfAnimals[valueAnimal].power}</p>
+                    </section>
+                    <section className="container-lg d-flex justify-content-evenly fight-style">
+                        <div>
+                            <h3>{listOfAnimals[valueAnimal].nome}</h3>
+                            <h1 className="animal-bg-fight">
+                                {listOfAnimals[valueAnimal].img}
+                            </h1>
+                            <div className="d-flex justify-content-evenly pt-4">
+                                <img src={Heart} alt="" />
+                                <img src={Knife} alt="" />
+                            </div>
+                            <div className="d-flex justify-content-around fs-1">
+                                <p>{listOfAnimals[valueAnimal].life}</p>
+                                <p>{listOfAnimals[valueAnimal].power}</p>
+                            </div>
                         </div>
-                    </div>
-                    <div>
-                        <h3>{listOfAnimals[randomChoose].nome}</h3>
-                        <h1 className="animal-bg-fight-enemy">
-                            {listOfAnimals[randomChoose].img}
-                        </h1>
-                        <div className="d-flex justify-content-evenly pt-4">
-                            <img src={Heart} alt="" />
-                            <img src={Knife} alt="" />
+                        <div>
+                            <h3>{listOfAnimals[randomChoose].nome}</h3>
+                            <h1 className="animal-bg-fight-enemy">
+                                {listOfAnimals[randomChoose].img}
+                            </h1>
+                            <div className="d-flex justify-content-evenly pt-4">
+                                <img src={Heart} alt="coracao" />
+                                <img src={Knife} alt="arma" />
+                            </div>
+                            <div className="d-flex justify-content-around fs-1">
+                                <p>{listOfAnimals[randomChoose].life}</p>
+                                <p>{listOfAnimals[randomChoose].power}</p>
+                            </div>
                         </div>
-                        <div className="d-flex justify-content-around fs-1">
-                            <p>{listOfAnimals[randomChoose].life}</p>
-                            <p>{listOfAnimals[randomChoose].power}</p>
-                        </div>
-                    </div>
-                </section>
+                    </section>
+                </>
             )}
         </>
     );
