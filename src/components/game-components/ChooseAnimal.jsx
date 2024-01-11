@@ -138,10 +138,17 @@ export default () => {
     const [gameFight, setGameFight] = useState(true);
     const [valueAnimal, setAnimalValue] = useState();
 
+    const [turno, setTurno] = useState(1);
+
     const chosenAnimal = () => {
         setAnimalValue(randomChoose);
         setGameFight(false);
     };
+
+    const atack = () => {
+        setTurno((value) => value + 1);
+    };
+
     return (
         <>
             {gameFight ? (
@@ -177,22 +184,24 @@ export default () => {
                 </section>
             ) : (
                 <>
-                    <section>
-                        <div>
-                            <button className="btn btn-game mx-1 my-1">
-                                Atacar
-                            </button>
-                            <button className="btn btn-game mx-1 my-1">
-                                Defender
-                            </button>
-                            <button className="btn btn-game mx-1 my-1">
-                                Especial
-                            </button>
-                            <button className="btn btn-game mx-1 my-1">
-                                Fugir
-                            </button>
-                        </div>
+                    <section className="text-center">
+                        <button
+                            className="btn btn-game mx-1 my-1"
+                            onClick={atack}
+                        >
+                            Atacar
+                        </button>
+                        <button className="btn btn-game mx-1 my-1" disabled>
+                            Especial
+                        </button>
+                        <button className="btn btn-game mx-1 my-1" disabled>
+                            Fugir
+                        </button>
                     </section>
+                    <div className="text-center pt-5">
+                        <h1>Turno</h1>
+                        <h5>{turno}</h5>
+                    </div>
                     <section className="container-lg d-flex justify-content-evenly fight-style">
                         <div>
                             <h3>{listOfAnimals[valueAnimal].nome}</h3>
@@ -208,6 +217,7 @@ export default () => {
                                 <p>{listOfAnimals[valueAnimal].power}</p>
                             </div>
                         </div>
+
                         <div>
                             <h3>{listOfAnimals[randomChoose].nome}</h3>
                             <h1 className="animal-bg-fight-enemy">
