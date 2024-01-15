@@ -220,7 +220,7 @@ export default () => {
 
                         <div>
                             <h3>{listOfAnimals[randomChoose].nome}</h3>
-                            <h1 className="animal-bg-fight-enemy">
+                            <h1 className="animal-bg-fight animal-bg-fight-enemy">
                                 {listOfAnimals[randomChoose].img}
                             </h1>
                             <div className="d-flex justify-content-evenly pt-4">
